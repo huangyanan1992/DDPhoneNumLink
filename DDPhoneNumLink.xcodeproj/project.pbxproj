@@ -13,6 +13,8 @@
 		66F5EAC01C3D17E0005A8FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F5EABE1C3D17E0005A8FCE /* Main.storyboard */; };
 		66F5EAC21C3D17E0005A8FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F5EAC11C3D17E0005A8FCE /* Assets.xcassets */; };
 		66F5EAC51C3D17E1005A8FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F5EAC31C3D17E1005A8FCE /* LaunchScreen.storyboard */; };
+		66F5EACF1C3D1836005A8FCE /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5EACE1C3D1836005A8FCE /* TTTAttributedLabel.m */; };
+		66F5EAD31C3D201E005A8FCE /* DDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5EAD21C3D201E005A8FCE /* DDUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		66F5EAC11C3D17E0005A8FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F5EAC41C3D17E1005A8FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66F5EAC61C3D17E1005A8FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F5EACD1C3D1836005A8FCE /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		66F5EACE1C3D1836005A8FCE /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		66F5EAD11C3D201E005A8FCE /* DDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDUtil.h; sourceTree = "<group>"; };
+		66F5EAD21C3D201E005A8FCE /* DDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		66F5EAB41C3D17E0005A8FCE /* DDPhoneNumLink */ = {
 			isa = PBXGroup;
 			children = (
+				66F5EAD01C3D1FE7005A8FCE /* IsPhoneNumUtil */,
+				66F5EACC1C3D1836005A8FCE /* TTTAttributedLabel */,
 				66F5EAB81C3D17E0005A8FCE /* AppDelegate.h */,
 				66F5EAB91C3D17E0005A8FCE /* AppDelegate.m */,
 				66F5EABB1C3D17E0005A8FCE /* ViewController.h */,
@@ -77,6 +85,24 @@
 				66F5EAB61C3D17E0005A8FCE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66F5EACC1C3D1836005A8FCE /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				66F5EACD1C3D1836005A8FCE /* TTTAttributedLabel.h */,
+				66F5EACE1C3D1836005A8FCE /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		66F5EAD01C3D1FE7005A8FCE /* IsPhoneNumUtil */ = {
+			isa = PBXGroup;
+			children = (
+				66F5EAD11C3D201E005A8FCE /* DDUtil.h */,
+				66F5EAD21C3D201E005A8FCE /* DDUtil.m */,
+			);
+			path = IsPhoneNumUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F5EAD31C3D201E005A8FCE /* DDUtil.m in Sources */,
 				66F5EABD1C3D17E0005A8FCE /* ViewController.m in Sources */,
 				66F5EABA1C3D17E0005A8FCE /* AppDelegate.m in Sources */,
 				66F5EAB71C3D17E0005A8FCE /* main.m in Sources */,
+				66F5EACF1C3D1836005A8FCE /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DDPhoneNumLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dingdingzufangzi.DDPhoneNumLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DDPhoneNumLink/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dingdingzufangzi.DDPhoneNumLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +328,7 @@
 				66F5EACB1C3D17E1005A8FCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
