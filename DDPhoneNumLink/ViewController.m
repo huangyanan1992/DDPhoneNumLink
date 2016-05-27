@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     NSString *content = @"这是手机号：17089538589\n这是手机号：18049284890\n不是手机号：20483829382\n这是固话号：4007701616\n没有连字符的固话0105342123";
     self.ddLabel.delegate = self;
     [self addLinkWithStr:content];
