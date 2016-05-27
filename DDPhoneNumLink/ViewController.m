@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *content = @"这是手机号：17089538589\n这是手机号：18049284890\n不是手机号：20483829382\n这是固话号：0371-54329847\n没有连字符的固话0105342123";
+    NSString *content = @"这是手机号：17089538589\n这是手机号：18049284890\n不是手机号：20483829382\n这是固话号：4007701616\n没有连字符的固话0105342123";
     self.ddLabel.delegate = self;
     [self addLinkWithStr:content];
 }
@@ -48,7 +48,7 @@
             //添加链接
             NSString *actionString = [NSString stringWithFormat:@"%@",[self.ddLabel.text substringWithRange:result.range]];
             
-            if ([DDUtil isMobilePhoneOrtelePhone:actionString]) {
+            if ([DDUtil isMobilePhoneOrtelePhone:actionString] || [[actionString substringToIndex:3] isEqualToString:@"400"]) {
                 [self.ddLabel addLinkToPhoneNumber:actionString withRange:result.range];
             }
         }];
